@@ -31,7 +31,7 @@ public class Captain
     public void levelUp()
     {
         level++;
-        int traits = 2;
+        int traits = 1 + Mathf.RoundToInt(2f*Random.Range(0f,luck/20));
 
 
     }

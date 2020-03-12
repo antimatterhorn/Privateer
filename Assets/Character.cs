@@ -12,4 +12,6 @@ public class Character : ScriptableObject
     public int baseInspiration;
     public int baseInitiative;
     public int baseLuck;
+
+    public bool alive = true;
 }
