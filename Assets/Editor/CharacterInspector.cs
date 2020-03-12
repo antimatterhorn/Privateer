@@ -15,7 +15,8 @@ public class CharacterInspector : ObjectPreview
         base.OnPreviewGUI(r, background);
         Character character = (Character)target;
         Sprite portrait = character.portrait;
-        DrawOnGUISprite(portrait);
+        if (portrait != null)
+            DrawOnGUISprite(portrait);
 
     }
 

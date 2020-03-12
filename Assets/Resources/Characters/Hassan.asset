@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c4f9f249bfafe1489941757f7cb7d9d, type: 3}
-  m_Name: Nancy
+  m_Name: Hassan
   m_EditorClassIdentifier: 
-  name: Nancy Alvarez
-  portrait: {fileID: 21300000, guid: 311b9f6d51974b848be4cf5286065808, type: 3}
-  nationality: 0
-  baseAccuracy: 4
-  baseInspiration: 2
-  baseInitiative: 2
-  baseLuck: 3
+  name: Hassan Karim al Aamir
+  portrait: {fileID: 21300000, guid: 27cc1ad87e759da4bbb514cc5d13e1e9, type: 3}
+  nationality: 11
+  baseAccuracy: 0
+  baseInspiration: 0
+  baseInitiative: 0
+  baseLuck: 0
   alive: 1

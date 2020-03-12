@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c4f9f249bfafe1489941757f7cb7d9d, type: 3}
-  m_Name: Nancy
+  m_Name: Li Hua
   m_EditorClassIdentifier: 
-  name: Nancy Alvarez
-  portrait: {fileID: 21300000, guid: 311b9f6d51974b848be4cf5286065808, type: 3}
-  nationality: 0
-  baseAccuracy: 4
-  baseInspiration: 2
-  baseInitiative: 2
-  baseLuck: 3
+  name: Li Hua
+  portrait: {fileID: 21300000, guid: 583f3414ba34bf14cbf6effcb7b24682, type: 3}
+  nationality: 9
+  baseAccuracy: 0
+  baseInspiration: 0
+  baseInitiative: 0
+  baseLuck: 0
   alive: 1

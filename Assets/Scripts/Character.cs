@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Character", menuName = "Character")]
 public class Character : ScriptableObject
@@ -29,5 +26,8 @@ public enum Nationality
     Cuba,
     Russia,
     Netherlands,
-    Nigeria,
+    India,
+    China,
+    Korea,
+    Morocco,
 }
