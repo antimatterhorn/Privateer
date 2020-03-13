@@ -23,6 +23,7 @@ public class Captain
         captainTraits.Add("accuracy", character.baseAccuracy);
         captainTraits.Add("inspiration", character.baseInspiration);
         captainTraits.Add("initiative", character.baseInitiative);
+        captainTraits.Add("infamy", character.baseInfamy);
         captainTraits.Add("luck", character.baseLuck);
         level = 1;
     }
@@ -34,7 +35,7 @@ public class Captain
         int traitsToLevel = 1 + Mathf.RoundToInt(2f*Random.Range(0f,luck/20f));
         for (int i = 0; i < traitsToLevel; i++)
         {
-            int j = Random.Range(0, 3); // this includes luck
+            int j = Random.Range(0, captainTraits.Count); // this includes luck
             string trait = captainTraits.Keys.ToList()[j];
             captainTraits[trait]++;
             Debug.Log(string.Format("Leveled {0}", trait));

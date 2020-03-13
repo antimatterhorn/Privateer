@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Li Hua
   portrait: {fileID: 21300000, guid: 583f3414ba34bf14cbf6effcb7b24682, type: 3}
-  nationality: 9
+  sex: 1
+  nationality: 5
   baseAccuracy: 0
   baseInspiration: 0
   baseInitiative: 0
+  baseInfamy: 0
   baseLuck: 0
   alive: 1

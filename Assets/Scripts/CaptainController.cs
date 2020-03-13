@@ -6,20 +6,22 @@ public class CaptainController : MonoBehaviour
 {
     public Character character;
     public SpriteRenderer spriteRenderer;
+    public Nationality nationality;
+
 
     private Captain captain;
+    public int luck;
 
     // Start is called before the first frame update
     void Start()
     {
-        Object[] allchars = Resources.LoadAll("Characters");
-        int j = Random.Range(0, allchars.Length - 1);
-        character = (Character)allchars[j];
-
+        character = ScriptableObject.CreateInstance<Character>();
+        character.GetRandomFrom(nationality);
         captain = new Captain(character);
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = captain.character.portrait;
         LevelUp();
+        luck = captain.captainTraits["luck"];
     }
 
     // Update is called once per frame

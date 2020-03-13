@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ida Crekett
   portrait: {fileID: 21300000, guid: baedd4b16099c784fb21129556631d50, type: 3}
+  sex: 1
   nationality: 0
   baseAccuracy: 0
   baseInspiration: 0
   baseInitiative: 0
+  baseInfamy: 0
   baseLuck: 0
   alive: 1
