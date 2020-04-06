@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d338c4769eb0cb846b63cb44bdd24379, type: 3}
+  m_Name: Dhow
+  m_EditorClassIdentifier: 
+  vesselClass: 0
+  portrait: {fileID: 0}
+  baseCost: 0
+  baseUpkeep: 0
+  baseHealth: 0
+  maxHealth: 0
+  baseDefense: 0
+  maxDefense: 0
+  baseSpeed: 0
+  maxSpeed: 0
+  baseCannons: 0
+  maxCannons: 0
+  maxCargo: 0

@@ -16,6 +16,8 @@ public class NameGenerator
         
         string first = firstName();
         string last = lastName();
+        if (nationality == Nationality.Russia && sex == Sex.Female)
+            last += "a";
         fullName = first + " " + last;
     }
     
@@ -42,10 +44,7 @@ public class NameGenerator
 
     public string lastName()
     {
-        List<string> surnames = ReadNames($"Assets/Resources/Portraits/{nationality}/lastNames.txt");
-        int count = surnames.Count;
-        int j = Random.Range(0, count);
-        return surnames[j];
+        return lastName(nationality);
     }
 
     public string firstName(Nationality _nationality, Sex _sex)
@@ -58,9 +57,6 @@ public class NameGenerator
 
     public string firstName()
     {
-        List<string> names = ReadNames($"Assets/Resources/Portraits/{nationality}/{sex}/firstNames.txt");
-        int count = names.Count;
-        int j = Random.Range(0, count);
-        return names[j];
+        return firstName(nationality,sex);
     }
 }

@@ -10,7 +10,10 @@ public class Captain
     public string name;
     public string title;
 
+    public Ship ship;
+
     public int level;
+    public int exp;
 
     public Dictionary<string,int> captainTraits;
 
@@ -19,42 +22,44 @@ public class Captain
         character = baseCharacter;
         name = character.name;
 
-        captainTraits = new Dictionary<string, int>();
-        captainTraits.Add("accuracy", character.baseAccuracy);
-        captainTraits.Add("inspiration", character.baseInspiration);
-        captainTraits.Add("initiative", character.baseInitiative);
-        captainTraits.Add("infamy", character.baseInfamy);
-        captainTraits.Add("luck", character.baseLuck);
+        captainTraits = new Dictionary<string, int>
+        {
+            { "accuracy",       character.baseAccuracy },
+            { "inspiration",    character.baseInspiration },
+            { "initiative",     character.baseInitiative },
+            { "infamy",         character.baseInfamy },
+            { "luck",           character.baseLuck }
+        };
         level = 1;
+        exp = 0;
     }
 
-    public void levelUp()
+    public void AssignToShip(Ship _ship)
     {
-        level++;
+        _ship.AssignCaptain(this);
+        ship = _ship;
+    }
+
+    public void LevelUp()
+    {
         int luck = captainTraits["luck"];
         int traitsToLevel = 1 + Mathf.RoundToInt(2f*Random.Range(0f,luck/20f));
-        for (int i = 0; i < traitsToLevel; i++)
-        {
-            int j = Random.Range(0, captainTraits.Count); // this includes luck
-            string trait = captainTraits.Keys.ToList()[j];
-            captainTraits[trait]++;
-            Debug.Log(string.Format("Leveled {0}", trait));
-        }
+        LevelUp(traitsToLevel);
     }
 
-    public void levelUp(int traitsToLevel)
+    public void LevelUp(int traitsToLevel)
     {
         level++;
         for (int i = 0; i < traitsToLevel; i++)
         {
-            int j = Random.Range(0, 3); // this includes luck
+            int j = Random.Range(0, captainTraits.Count);
             string trait = captainTraits.Keys.ToList()[j];
             captainTraits[trait]++;
             Debug.Log(string.Format("Leveled {0}", trait));
         }
     }
 
-    public void renameCaptain(string _name)
+    public void RenameCaptain(string _name)
     {
         name = _name;
     }

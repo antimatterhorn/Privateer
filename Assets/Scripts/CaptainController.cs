@@ -22,6 +22,8 @@ public class CaptainController : MonoBehaviour
         spriteRenderer.sprite = captain.character.portrait;
         LevelUp();
         luck = captain.captainTraits["luck"];
+
+
     }
 
     // Update is called once per frame
@@ -32,6 +34,6 @@ public class CaptainController : MonoBehaviour
 
     void LevelUp()
     {
-        captain.levelUp();
+        captain.LevelUp();
     }
 }

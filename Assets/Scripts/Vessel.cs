@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Vessel", menuName = "Vessel")]
 public class Vessel : ScriptableObject
 {
-    public string shipClass;
+    public VesselClass vesselClass;
     public Sprite portrait;
 
     public int baseCost;
@@ -23,3 +23,17 @@ public class Vessel : ScriptableObject
     public int maxCargo;
 }
 
+public enum VesselClass
+{
+    Dhow,
+    Sloop,
+    Cutter,
+    Junk,
+    Ketch,
+    Brig,
+    Xebec,
+    EastIndiaman,
+    Galleon,
+    Clipper,
+    ManofWar,
+}
